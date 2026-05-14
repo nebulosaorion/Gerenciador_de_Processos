@@ -110,8 +110,5 @@ void escalonamento_prioridade(Processo *processos, int num_processos, int quantu
     // Código do seu colega virá aqui
 }
 
-void loteria(Processo *processos, int num_processos, int quantum, const char *arquivo_saida) {
-    printf("[Aviso] Executando funcao padrao: Loteria\n");
-    // Código do seu colega virá aqui
-}
+
 
