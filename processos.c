@@ -96,19 +96,7 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
-// =========================================================================
-// STUBS TEMPORÁRIOS - APAGUE QUANDO FOR implementar AS FUNÇÕES DE CADA ALGORITMO
-// =========================================================================
 
-void alternancia_circular(Processo *processos, int num_processos, int quantum, const char *arquivo_saida) {
-    printf("[Aviso] Executando funcao padrao: Alternancia Circular\n");
-    // Código do seu colega virá aqui
-}
-
-void escalonamento_prioridade(Processo *processos, int num_processos, int quantum, const char *arquivo_saida) {
-    printf("[Aviso] Executando funcao padrao: Prioridade\n");
-    // Código do seu colega virá aqui
-}
 
 
 

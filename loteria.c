@@ -109,13 +109,27 @@ void loteria(void *lista_ptr, int num_processos, int quantum, const char *arquiv
         }
     }
 
-    // --- RELATÓRIO FINAL ---
+    // ==========================================================
+    // IMPRESSÃO DUPLA (ARQUIVO E TERMINAL)
+    // ==========================================================
     fprintf(out, "PID | Latencia | Tpronto | Tempo de Turnaround\n");
+    
+    printf("\n========================================================\n");
+    printf("             RELATORIO FINAL DE DESEMPENHO              \n");
+    printf("========================================================\n");
+    printf("PID | Latencia | Tpronto | Tempo de Turnaround\n");
+
     for (int i = 0; i < num_processos; i++) {
         int turnaround = procs[i].tempo_conclusao - procs[i].momento_criacao;
         int tpronto = turnaround - procs[i].tempo_execucao;
+        
+        // Escreve no arquivo de texto
         fprintf(out, "%d | %d | %d | %d\n", procs[i].pid, procs[i].latencia, tpronto, turnaround);
+        
+        // Imprime direto no terminal
+        printf("%d   | %d        | %d       | %d\n", procs[i].pid, procs[i].latencia, tpronto, turnaround);
     }
+    printf("========================================================\n");
 
     fclose(out);
     free(procs);

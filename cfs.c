@@ -190,12 +190,31 @@ void cfs(void *lista_ptr, int num_processos, int quantum, const char *arquivo_sa
         }
     }
 
+    // ==========================================================
+    // NOVO: IMPRESSÃO DUPLA (ARQUIVO E TERMINAL)
+    // ==========================================================
+    
+    // 1. Cabeçalhos
     fprintf(out, "PID | Latencia | Tpronto | Tempo de Turnaround\n");
+    
+    printf("\n========================================================\n");
+    printf("             RELATORIO FINAL DE DESEMPENHO              \n");
+    printf("========================================================\n");
+    printf("PID | Latencia | Tpronto | Tempo de Turnaround\n");
+
+    // 2. Dados
     for (int i = 0; i < num_processos; i++) {
         int turnaround = stats[i].conclusao - stats[i].criacao;
         int tpronto = turnaround - stats[i].exec_total;
+        
+        // Escreve no arquivo de texto
         fprintf(out, "%d | %d | %d | %d\n", stats[i].pid, stats[i].latencia, tpronto, turnaround);
+        
+        // Imprime direto no terminal
+        printf("%d   | %d        | %d       | %d\n", stats[i].pid, stats[i].latencia, tpronto, turnaround);
     }
+    
+    printf("========================================================\n");
 
     fclose(out);
     free(stats);
