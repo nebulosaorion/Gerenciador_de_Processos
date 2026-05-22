@@ -29,7 +29,7 @@ gcc processos.c alternancia_circular.c prioridade.c loteria.c cfs.c -o escalonad
 ## Como executar
 
 ```bash
-./escalonador
+./escalonador nome_do_arquivo_entrada.txt
 ```
 
 O programa apresenta um menu com duas opções:
