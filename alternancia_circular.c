@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "processos.h"
+
+// Estrutura externa usada pelo orquestrador principal
+typedef struct {
+    int momento_criacao;
+    int pid;
+    int tempo_execucao;
+    int prioridade_bilhetes;
+} Processo;
 
 // Estrutura interna para facilitar o controle na Alternância Circular
 typedef struct {
