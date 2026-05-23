@@ -1,14 +1,12 @@
-=============================================================================
+
 TRABALHO 01: SISTEMAS OPERACIONAIS - ESCALONADOR DE PROCESSOS (TURMA A)
-=============================================================================
 
 Integrantes do Grupo:
 1. Alessandro Goldas da Cruz (Matrícula: [Sua Matrícula])
-2. [Nome do Colega 2] (Matrícula: [Matrícula])
+2. Miriã do Amaral Evangelista (Matrícula:  166627)
 3. [Nome do Colega 3] (Matrícula: [Matrícula])
 4. [Nome do Colega 4] (Matrícula: [Matrícula])
-
------------------------------------------------------------------------------
+_________________________________________________________________________
 1. DESCRIÇÃO DO PROJETO
 -----------------------------------------------------------------------------
 Este projeto implementa um simulador de escalonamento preemptivo de processos, 
