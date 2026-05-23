@@ -124,11 +124,11 @@ void alternancia_circular(Processo *processos, int num_processos, int quantum, c
             }
 
             int tempo_rodar = (p->tempo_restante < quantum) ? p->tempo_restante : quantum;
-
-            printf("Tempo %d: PID %d na CPU (Restava %dms | Executando %dms)\n",
-                   tempo_atual, p->pid, p->tempo_restante, tempo_rodar);
-
+            int restante_apos_execucao = p->tempo_restante - tempo_rodar;
             int tempo_final_fatia = tempo_atual + tempo_rodar;
+
+            printf("Tempo %d-%d: PID %d na CPU (Executando %dms | Restante apos execucao %dms)\n",
+                   tempo_atual, tempo_final_fatia, p->pid, tempo_rodar, restante_apos_execucao);
 
             //  Processos podem chegar enquanto este roda
             // Precisamos enfileirar os novatos antes de devolver o processo atual para a fila.
@@ -142,7 +142,7 @@ void alternancia_circular(Processo *processos, int num_processos, int quantum, c
                 }
             }
 
-            p->tempo_restante -= tempo_rodar;
+            p->tempo_restante = restante_apos_execucao;
             tempo_atual = tempo_final_fatia; // Avança o relógio
 
             //Verifica o destino do processo atual
