@@ -2,7 +2,7 @@
 TRABALHO 01: SISTEMAS OPERACIONAIS - ESCALONADOR DE PROCESSOS (TURMA A)
 
 Integrantes do Grupo:
-1. Alessandro Goldas da Cruz (Matrícula: [Sua Matrícula])
+1. Alessandro Goldas da Cruz (Matrícula: 166600)
 2. Miriã do Amaral Evangelista (Matrícula:  166627)
 3. [Nome do Colega 3] (Matrícula: [Matrícula])
 4. [Nome do Colega 4] (Matrícula: [Matrícula])
